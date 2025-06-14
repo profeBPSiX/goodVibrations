@@ -6,12 +6,14 @@
     <meta name="description" content="Good Vibrations és un espai musical que et convida a descobrir cançons segons els teus estats d'ànim: escolta, explora i comparteix la música que connecta amb tu.">
     <title>Good Vibrations - Inici</title>
     <link rel="stylesheet" href="css/estils.css">
+    <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    
 </head>
+
 <body>
+
     <header>
         <a href="index.html"><img src="img/logo.webp" alt="Logotip Good Vibrations" class="logo"></a>
         <nav>
@@ -21,12 +23,12 @@
                 
             </ul>
         </nav>
-        <a href="#" class="btn-sessio">Inicia la sessió</a>
+        <a href="" class="btn-sessio">Inicia la sessió</a>
     </header>
     
     <main class="container index">
         <section class="cercador-section">
-            <h1>Good Vibrations</h1>
+            <h1><span class="titol" lang="en">Good Vibrations</span></h1>
             <form class="form-cerca" action="index.html" method="post">
                 <input type="text" id="cerca" name="cerca" placeholder="Cerca una cançó...">
                 <button type="submit">Cerca</button>
@@ -36,16 +38,12 @@
         <section class="temes-section">
             <h2>Troba la cançó perfecta per a cada moment</h2>
             <ul class="select-temes">
-                <div class="columna-tema">
-                    <li><a href="#">🎵 <span class="text-tema">Aleatori</span></a></li>
-                    <li><a href="#">😎 <span class="text-tema">Bon rotllo</span></a></li>
-                    <li><a href="#">💪 <span class="text-tema">Motivació</span></a></li>
-                </div>
-                <div class="columna-tema">
-                    <li><a href="#">❤️ <span class="text-tema">Amor</span></a></li>
-                    <li><a href="#">🎉 <span class="text-tema">Celebració</span></a></li>
-                    <li><a href="#">🌧️ <span class="text-tema">Tristesa</span></a></li>
-                </div>
+                <li><a href="categories.html#aleatori"><span class="emoji aleatori"></span> <span class="text-tema">Aleatori</span></a></li>
+                <li><a href="categories.html#bon-rotllo"><span class="emoji bon-rotllo"></span> <span class="text-tema">Bon rotllo</span></a></li>
+                <li><a href="categories.html#motivacio"><span class="emoji motivacio"></span> <span class="text-tema">Motivació</span></a></li>
+                <li><a href="categories.html#amor"><span class="emoji amor"></span> <span class="text-tema">Amor</span></a></li>
+                <li><a href="categories.html#celebracio"><span class="emoji celebracio"></span> <span class="text-tema">Celebració</span></a></li>
+                <li><a href="categories.html#tristesa"><span class="emoji tristesa"></span> <span class="text-tema">Tristesa</span></a></li>
             </ul>
         </section>
 
@@ -54,22 +52,105 @@
             <div class="presentacio-container">
                 <div class="img-container">
                     <figure>
-                    <img src="img/about.jpg" alt="Noia escoltant música" />
-                    <figcaption>Foto de Marcelo Chagas</figcaption>
+                        <img src="img/about.jpg" alt="Noia escoltant música">
+                        <figcaption>Foto de Marcelo Chagas</figcaption>
                     </figure>
                 </div>
                 <div class="presentacio-text-container">
                     <p>
-                        A <b>Good Vibrations</b> seleccionem cançons perquè t’acompanyin en tot moment. Hi ha una cançó per a cada ocasió. Tant se val si estàs content o si estàs trist, si necessites una motivació extra per encarar el dia o si vols celebrar… aquí trobaràs la cançó que coincideixi amb la teva energia. Explora les nostres <em>playlists</em> temàtiques, descobreix històries darrere de les cançons i troba cada dia una melodia que sintonitzi amb tu.
+                        A <span class="titol" lang="en">Good Vibrations</span> seleccionem cançons perquè t’acompanyin en tot moment. Hi ha una cançó per a cada ocasió. Tant se val si estàs content o si estàs trist, si necessites una motivació extra per encarar el dia o si vols celebrar… aquí trobaràs la cançó que coincideixi amb la teva energia. Explora les nostres <i lang="en">playlists</i> temàtiques, descobreix històries darrere de les cançons i troba cada dia una melodia que sintonitzi amb tu.
                     </p>
                 </div>
             </div>
         </section>
 
+        <section class="tema-dia">
+            <h2>La cançó del dia</h2>
+            <div class="contenidor-tema-form">
+                <article class="info-tema">
+                    <h3>Good vibrations</h3>
+                    <ul class="dades-tema">
+                        <li>Artista: The Beach Boys</li>
+                        <li>Publicació: 10 d’octubre de 1966</li>
+                        <li>Durada: 03:35</li>
+                        <li>Idioma: anglès</li>
+                        <li>Estat d’ànim: <span class="emoji bon-rotllo"></span> Bon rotllo</li>
+                    </ul>
+                    <blockquote lang="en">
+                        <p>
+                            I, I love the colorful clothes she wears<br>
+                            And the way the sunlight plays upon her hair<br>
+                            I hear the sound of a gentle word<br>
+                            On the wind that lifts her perfume through the air<br>
+                            ...
+                        </p>
+                    </blockquote>
+                    <a href="https://www.youtube.com/watch?v=apBWI6xrbLY" class="link-Youtube">Escolta-la a Youtube</a>
+                </article>
+                <div class="form-suggeriment">
+                    <p>Digues-nos quina cançó hauria de ser-hi a les <i lang="en">playlists</i> de <span class="titol" lang="en">Good Vibrations</span>.</p>
+                    <form action="index.html" method="post">
+                        <label for="titol" class="sr-only">Títol de la cançó</label>
+                        <input type="text" id="titol" name="titol" placeholder="ex. Imagine" required>
+
+                        <label for="artista" class="sr-only">Artista</label>
+                        <input type="text" id="artista" name="artista" placeholder="ex. John Lennon" required>
+
+                        <label for="motiu" class="sr-only">Per què la recomanes?</label>
+                        <textarea id="motiu" name="motiu" placeholder="Es especial per a mi perquè..." required>
+                        </textarea>
+
+                        <label for="categoria">Categoria suggerida</label>
+                        <select id="categoria" name="categoria" required>
+                            <option value="" disabled selected>Tria una categoria</option>
+                            <option value="aleatori">Aleatori</option>
+                            <option value="amor">Amor</option>
+                            <option value="bon-rotllo">Bon rotllo</option>
+                            <option value="celebracio">Celebració</option>
+                            <option value="motivacio">Motivació</option>
+                            <option value="tristesa">Tristesa</option>
+                        </select>
+
+                        <button type="submit">Envia</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="criteri">
+            <h2>Tenim criteri…</h2>
+            <p>
+                Les cançons que trobaràs a <span class="titol" lang="en">Good Vibrations</span> no es trien a l’atzar. Considerem la seva qualitat artística, l’impacte cultural i social, la seva accessibilitat en plataformes obertes i la història al darrera de la cançó.
+            </p>
+        </section>
+
+
     </main>
 
     <footer>
-        
+        <div class="footer-left">
+            <img src="img/logo-white.webp" alt="Logotip Good Vibrations">
+            <p>
+                <abbr title="Universitat Oberta de Catalunya">UOC</abbr>, 2025. Èric Bleda Bejar
+            </p>
+            <p>
+                Per a l'assignatura <abbr title="HyperText Markup Language">HTML</abbr> i <abbr title="Cascading Style Sheets">CSS</abbr>
+            </p>
+        </div>
+        <div class="footer-right">
+            <nav class="footer-social">
+                <ul>
+                    <li><a href="#"><img class="icona-Instagram" src="img/instagram.svg" alt="Instagram"></a></li>
+                    <li><a href="#"><img class="icona-Youtube" src="img/youtube.svg" alt="YouTube"></a></li>
+                </ul>
+            </nav>
+            <ul class="footer-legal">
+                <li><a href="">Política de privadesa</a></li>
+                <li><a href="">Política de <i lang="en">cookies</i></a></li>
+                <li><a href="">Avís legal</a></li>
+                <li><a href="">Contacte</a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>

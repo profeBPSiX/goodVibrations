@@ -33,9 +33,9 @@ body {
   color: var(--QuasiNegre);
 }
 
+/* Estils relatiu al header */
 header, footer {
   width: 100%;
-  padding: 1rem;
 }
 
 header {
@@ -43,7 +43,7 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1rem;
+  padding: 16px 24px;
 }
 
 .logo {
@@ -68,15 +68,24 @@ header {
   color: var(--TaronjaSubtil);
 }
 
-.menu-principal li .actiu {
-  border-bottom: 4px solid var(--Taronja);
-  padding-bottom: 0.5rem;
+.menu-principal li .seleccionat {
+  position: relative;
+}
+
+.menu-principal li .seleccionat::after {
+  content: "";
+  position: relative;
+  display: block;
+  left: 0;
+  width: 16px;
+  height: 4px;
+  background-color: var(--Taronja);
 }
 
 .btn-sessio {
   font-size: 12px;
   background-color: var(--QuasiNegre);
-  color: white;
+  color: var(--Blanc);
   padding: 7px 15px;
   border-radius: 20px;
   text-decoration: none;
@@ -88,7 +97,94 @@ header {
 }
 
 
+
+/* Estil relatiu al footer */
+
+footer {
+  background-color: var(--QuasiNegre);
+  color: var(--Blanc);
+  padding: 32px 46px 46px 46px;
+  text-align: center;
+}
+
+.footer-left img {
+  height: 56px;
+  margin-bottom: 16px;
+}
+
+.footer-left p {
+  margin: 4px 0px;
+  font-size: 12px;
+}
+
+.footer-right {
+  text-align: right;
+  margin-top: 18px;
+}
+
+.footer-social ul {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  padding: 0px;
+  margin: 0px;
+}
+
+.icona-Youtube {
+  width: 30px;
+}
+
+.icona-Instagram {
+  width: 24px;
+}
+
+.footer-social a img {
+  transition: opacity 0.3s ease;
+}
+
+.footer-social a:hover img {
+  opacity: 0.7;
+}
+
+.footer-legal {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-legal li {
+  margin: 8px 0;
+}
+
+.footer-legal li::after {
+  content: "·";
+  margin-left: 0.5rem;
+}
+
+.footer-legal li::after {
+  content: "";
+}
+
+.footer-legal a {
+  color: var(--Blanc);
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.footer-legal a:hover {
+  color: var(--TaronjaSubtil);
+}
+
+
+
 /* Estil relatiu a la seccíó del cercador */
+
+span.titol {
+  font-weight: 700;
+}
+
 .cercador-section {
   background-color: var(--QuasiNegre);
   color: var(--Blanc);
@@ -158,22 +254,18 @@ h2 {
 }
 
 .select-temes {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: center;
-  gap: 4rem;
-  flex-wrap: wrap;
+  gap: 12px 54px;
   list-style: none;
   padding: 0;
   margin: 0 auto;
 }
 
-.columna-tema {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
 
-.columna-tema li a {
+
+.select-temes li a {
   display: block;
   font-size: 16px;
   text-transform: uppercase;
@@ -183,23 +275,48 @@ h2 {
   border-radius: 16px;
   text-align: left;
   text-decoration: none;
-  min-width: 400px;
 }
 
-.columna-tema li a .text-tema {
+
+.emoji {
+  font-size: 18px;
+}
+
+.aleatori::before {
+  content: "🎵";
+}
+
+.bon-rotllo::before {
+  content: "😎";
+}
+
+.motivacio::before {
+  content: "💪";
+}
+
+.amor::before {
+  content: "❤️";
+}
+
+.celebracio::before {
+  content: "🎉";
+}
+
+.tristesa::before {
+  content: "🌧️";
+}
+
+.select-temes li a .text-tema {
   font-size: 18px;
   margin-left: 8px;
 }
 
-.columna-tema li a:hover {
+.select-temes li a:hover {
   background-color: var(--TaronjaSubtil);
 }
 
 
-
-
-
-
+/* Estil relatiu a la seccíó presentacio-section */
 
 .presentacio-section {
   background: linear-gradient(135deg, var(--Morat) 0%, var(--Taronja) 30%, var(--TaronjaSubtil) 65%, var(--GrisClar) 100%);
@@ -214,10 +331,11 @@ h2 {
 }
 
 .img-container figure {
-  margin: 0;
+  margin: 0px 0px 12px 0px;
   position: relative;
   text-align: left;
   max-width: 100%;
+
 }
 
 .img-container img {
@@ -248,7 +366,314 @@ h2 {
   flex-wrap: wrap;
 }
 
+
+
+
+/* Estil relatiu a la cançó del dia + formulari */
+
+.tema-dia {
+  background-color: var(--QuasiNegre);
+  color: var(--Blanc);
+  padding: 42px 64px;
+}
+
+.tema-dia h2 {
+  font-size: 32px;
+  margin-bottom: 1.5rem;
+}
+
+.contenidor-tema-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-tema {
+  background: linear-gradient(
+    135deg,
+    var(--Morat) 0%,
+    var(--Taronja) 70%
+  );
+  padding: 3rem;
+}
+
+.dades-tema {
+  line-height: 36px;
+  margin-bottom: 58px;
+}
+
+.info-tema h3 {
+  font-size: 24px;
+  font-style: italic;
+  margin-bottom: 1rem;
+
+}
+
+.info-tema ul {
+  font-size: 18px;
+  list-style-type: square;
+  padding: 0;
+  margin-left: 14px;
+}
+
+.info-tema ul li {
+  margin-bottom: 0.5rem;
+}
+
+.info-tema blockquote {
+  font-size: 18px;
+  border-left: 1px solid var(--Blanc);
+  margin: 16px 0px;
+  padding-left: 1rem;
+}
+
+.info-tema .link-Youtube {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--QuasiNegre);
+  font-weight: 700;
+  font-size: 24px;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--QuasiNegre);
+}
+
+.info-tema .link-Youtube:hover {
+  border-bottom-style: solid;
+}
+
+
+/* Formulari suggeriment */
+.form-suggeriment {
+  font-size: 18px;
+  flex: 1;
+}
+
+.form-suggeriment p {
+  margin-bottom: 1rem;
+}
+
+.form-suggeriment form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-suggeriment input[type="text"], .form-suggeriment textarea, .form-suggeriment select {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  background: var(--GrisClar);
+  border: none;
+  padding: 8px;
+}
+
+.form-suggeriment input:focus, .form-suggeriment textarea:focus, .form-suggeriment select:focus {
+  outline: none;
+  box-shadow: 0 0 15px var(--Blanc);
+}
+
+.form-suggeriment button {
+  display: inline-block;
+  width: fit-content;
+  font-size: 18px;
+  background: var(--Taronja);
+  color: var(--QuasiNegre);
+  border: none;
+  margin-top: 12px;
+  padding: 8px 42px;
+  border-radius: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.form-suggeriment button:hover {
+  background: var(--TaronjaSubtil);
+}
+
+.form-suggeriment textarea {
+  min-height: 120px;
+}
+
+
+/* Secció criteri */
+.criteri {
+  background-color: var(--GrisClar);
+  color: var(--QuasiNegre);
+  padding: 48px 16px;
+  margin-bottom: 74px;
+}
+
+.criteri h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.criteri p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-size: 23px;
+  text-align: left;
+}
+
+
+
+
+/*--------------------------------
+------ Estil categories.html -----
+---------------------------------*/
+
+
+.categoria-section {
+  padding: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.categoria-section p {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.nav-categories {
+  padding: 20px;
+}
+
+.nav-categories ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-categories li {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--QuasiNegre);
+  padding: 5px 0;
+}
+
+.nav-categories li a {
+  display: flex;
+  align-items: center;
+  color: var(--QuasiNegre);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-categories li a:hover {
+  color: var(--TaronjaSubtil);
+}
+
+.nav-categories a::before{
+  margin-right:8px;
+}
+
+.tema {
+  background-color: var(--QuasiNegre);
+  color: var(--Blanc);
+  padding: 16px;
+}
+
+.tema h3 {
+  font-style: italic;
+  font-size: 18px;
+  margin-bottom: 14px;
+}
+
+.carta-tema .autor {
+  position: relative;
+  font-size: 13px;
+}
+
+.carta-tema .autor::before {
+  content: "";
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 8px;
+  background-color: var(--Morat);
+  margin-right: 6px;
+}
+
+.tema a.link-Youtube img {
+  width: 30px;
+  height: 30px;
+  transition: opacity 0.3s ease;
+}
+
+.tema a.link-Youtube img:hover {
+  opacity: 0.7;
+}
+
+.grid-tema {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.btn-mes {
+  display: inline-block;
+  background-color: var(--QuasiNegre);
+  color: var(--Blanc);
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  float: right;  
+}
+
+.btn-mes:hover {
+  background-color: var(--TaronjaSubtil);
+}
+
+
+
+
+
+/* Format tablet */
 @media (min-width: 768px) {
+  
+  .img-container figure {
+    margin-bottom: 0px;
+  }
+
+  .presentacio-text-container {
+    margin-top: 10px;
+  }
+
+  .nav-categories {
+    padding: 30px;
+  }
+
+  .categoria-section {
+    padding: 30px;
+  }
+  
+}
+
+
+/* Format desktop */
+@media (min-width: 1024px) {
+
+  .contenidor-tema-form {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .info-tema {
+    flex: 0.8;
+    margin-right: 54px;
+  }
+
+  .form-suggeriment {
+    flex: 1.2;
+  }
+
   .presentacio-section {
     display: flex;
   }
@@ -269,17 +694,99 @@ h2 {
   .presentacio-section .presentacio-container {
     margin-top: 0;
   }
-}
 
-
-
-@media (max-width: 768px) {
-  .menu-principal {
-    flex-direction: column;
-    gap: 0.5rem;
+  .temes-section {
+    max-width: 800px;
+    margin: 0 auto;
   }
 
-  .btn-sessio {
-    margin-top: 1rem;
+  .cercador-section h1 {
+    font-size: 50px;
   }
+
+  .cercador-section {
+    padding: 140px 16px;
+  }
+
+  .form-cerca {
+    max-width: 840px;
+  }
+
+  #cerca {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  .form-cerca button {
+    font-size: 16px;
+    padding: 0px 52px; 
+  }
+
+  /* Adaptació del footer */
+  footer {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .footer-left {
+    text-align: left;
+  }
+
+  .footer-right {
+    text-align: right;
+  }
+
+  .footer-social ul {
+    justify-content: flex-end;
+  }
+
+  .footer-legal {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .footer-legal li {
+    margin: 0;
+  }
+
+  .footer-legal li::after {
+    content: "·";
+    margin-left: 8px;
+  }
+
+  .footer-legal li:last-child::after {
+    content: "";
+  }
+
+  .footer-social ul {
+    margin: 16px 0px;
+  }
+
+  .categories {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .nav-categories {
+    flex: 0.25;
+  }
+
+  .bloc-categories {
+    flex: 1.75;
+    margin-bottom: 125px;
+  }
+
+  .nav-categories {
+    padding: 20px 0px 20px 20px;
+  }
+
+  .categoria-section {
+    padding: 20px 45px 20px 20px;
+  }
+
 }
